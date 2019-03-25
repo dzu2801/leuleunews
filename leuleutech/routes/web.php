@@ -14,6 +14,5 @@
 Route::get('/quantri', 'QTriController@Home');
 Route::get('/quantri/dsbaiviet', 'QTriController@listPost');
 Route::get('/quantri/dsdanhmuc', 'QTriController@listCate');
-
-
-
+Route::post('/quantri/taobaiviet', 'QTriController@createPost');
+Route::get('/quantri/taobaiviet', 'QTriController@createPost');
