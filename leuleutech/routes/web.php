@@ -16,3 +16,12 @@ Route::get('/quantri/dsbaiviet', 'QTriController@listPost');
 Route::get('/quantri/dsdanhmuc', 'QTriController@listCate');
 Route::post('/quantri/taobaiviet', 'QTriController@createPost');
 Route::get('/quantri/taobaiviet', 'QTriController@createPost');
+
+Route::post('quantri/createnew','QTriController@Create');
+//Route::get('quantri/createnew','QTriController@Create');
+
+//Route::get('quantri/editcategory/{id}','QTriController@EditCategories');
+//Route::post('quantri/editcategory/{id}','QTriController@EditCategories');
+
+Route::get('quantri/editnews/{id}','QTriController@editNews');
+Route::post('quantri/editnews/{id}','QTriController@editNews');
