@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="vi">
 <head>
@@ -8,11 +7,11 @@
     <title>{{config('app.name','LeuLeu News')}}</title>
 
     <link href='http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800' rel='stylesheet' type='text/css'>
-    <link href="fonts/font-awesome/css/font-awesome.min.css" rel="stylesheet">
-    <link href="css/bootstrap.min.css" rel="stylesheet">
-    <link href="css/owl.carousel.css" rel="stylesheet" />
-    <link href="css/owl.theme.css" rel="stylesheet" />
-    <link href="css/custom.css" rel="stylesheet">
+    <link href="{{asset('fonts/font-awesome/css/font-awesome.min.css')}}" rel="stylesheet">
+    <link href="{{asset('css/bootstrap.min.css')}}" rel="stylesheet">
+    <link href="{{asset('css/owl.carousel.css')}}" rel="stylesheet" />
+    <link href="{{asset('css/owl.theme.css')}}" rel="stylesheet" />
+    <link href="{{asset('css/custom.css')}}" rel="stylesheet">
 
     <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -20,6 +19,8 @@
     <script src="js/html5shiv.min.js"></script>
     <script src="js/respond.min.js"></script>
     <![endif]-->
+    <div id="fb-root"></div>
+<script async defer crossorigin="anonymous" src="https://connect.facebook.net/en_GB/sdk.js#xfbml=1&version=v3.2&appId=1880584012162103&autoLogAppEvents=1"></script>
 </head>
 <body class="theme-blue">
 
@@ -32,206 +33,17 @@
         <!--Start Breaking-->
         @include('layout.inc.breacking')
         <!--End Breaking-->
-        @yield('content')
         <!--Featured post 1 POST dau giao dien khac, max 5 bai viet-->
-        @include('layout.inc.featured')
+        {{-- @include('layout.inc.featured') --}}
+        @yield('Featurde')
         <!--End Featured post-->
 
         <!--Content-->
         <div class="custom-container">
 
             <!--Start row-->
-            <div class="row border-bottom2">
-
-                <!--Content left-->
-                <div class="col-md-8 col-sm-8 style-box1 tzcontent">
-
-                    <!--Wrap element SMARTPHONES-->
-                        @include('layout.inc.elementSmartPhone')
-                    <!--End Wrap element SMARTPHONE-->
-
-                    <!--Wrap element Cars And Motos-->
-                        @include('layout.inc.elementCarsMotos')
-                    <!--End Wrap element-->
-
-                    <!--Wrap element Laptops-->
-                        @include('layout.inc.elementLaptop')
-                    <!--End Wrap element Laptop-->
-
-                </div>
-                <!--End Content left-->
-
-                <!--Content right-->
-                @include('layout.inc.contentHotNews')
-                <!--End Content right-->
-
-            </div>
+            @yield('content')
             <!--End row-->
-
-
-            <div class="row">
-                <div class="col-md-12">
-                    <div class="tz-box-cat-slider">
-                        <!--Slider post-->
-                        <div class="slider-post-wrap">
-
-                            <ul class="slider-post slider-post3">
-                                <li>
-                                    <div class="item-thumbnail-wrap">
-                                        <div class="tz-thumbnail">
-                                            <a href="single-blog.html">
-                                                <img src="images/data/image-demo/370x248.png" alt="The 20 free things in Sydney with my girlfriend">
-                                            </a>
-
-                                            <div class="tz-infomation">
-                                                <a class="blue-dark cat_name" href="page-blog.html">ELECTRIC</a>
-                                                <h3 class="tz-post-title"><a href="single-blog.html">The 20 free things in Sydney with my girlfriend</a></h3>
-                                                <span class="meta">by <a href="page-blog.html">Jane William Doe / </a>  12 April 2015 </span>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </li>
-                                <li>
-                                    <div class="item-thumbnail-wrap">
-                                        <div class="tz-thumbnail">
-                                            <a href="single-blog.html">
-                                                <img src="images/data/image-demo/370x248.png" alt="The 20 free things in Sydney with my girlfriend">
-                                            </a>
-                                            <div class="tz-infomation">
-                                                <a class="blue-light cat_name" href="page-blog.html">ELECTRIC</a>
-                                                <h3 class="tz-post-title"><a href="single-blog.html">The 20 free things in Sydney with my girlfriend</a></h3>
-                                                <span class="meta">by <a href="page-blog.html">Jane William Doe / </a>  12 April 2015 </span>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </li>
-                                <li>
-                                    <div class="item-thumbnail-wrap">
-                                        <div class="tz-thumbnail">
-                                            <a href="single-blog.html">
-                                                <img src="images/data/image-demo/370x248.png" alt="The 20 free things in Sydney with my girlfriend">
-                                            </a>
-                                            <div class="tz-infomation">
-                                                <a class="gold cat_name" href="page-blog.html">ELECTRIC</a>
-                                                <h3 class="tz-post-title"><a href="single-blog.html">The 20 free things in Sydney with my girlfriend</a></h3>
-                                                <span class="meta">by <a href="page-blog.html">Jane William Doe / </a>  12 April 2015 </span>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </li>
-                                <li>
-                                    <div class="item-thumbnail-wrap">
-                                        <div class="tz-thumbnail">
-                                            <a href="single-blog.html">
-                                                <img src="images/data/image-demo/370x248.png" alt="The 20 free things in Sydney with my girlfriend">
-                                            </a>
-                                            <div class="tz-infomation">
-                                                <a class="blue-light cat_name" href="page-blog.html">ELECTRIC</a>
-                                                <h3 class="tz-post-title"><a href="single-blog.html">The 20 free things in Sydney with my girlfriend</a></h3>
-                                                <span class="meta">by <a href="page-blog.html">Jane William Doe / </a>  12 April 2015 </span>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </li>
-                            </ul>
-
-                            <!--Start contro-->
-                            <div class="slider-contro  pull-right">
-                                <button class="tz-button-prev contro-style2 prev-post">
-                                    <i class="fa fa-angle-left"></i>
-                                </button>
-                                <button class="tz-button-next contro-style2 next-post">
-                                    <i class="fa fa-angle-right"></i>
-                                </button>
-                            </div>
-                            <!--End start contro-->
-
-                        </div>
-                        <!--End slider post-->
-                    </div>
-                </div>
-            </div>
-
-            <!--Start Row chứa bài viết về thiêt bị số-->
-            <div class="row">
-                <div class="col-md-8 col-sm-8 style-box1 tzcontent">
-
-                    <!--Start Box thiết bị số-->
-                 @include('layout.inc.elementElectronicDevices')
-                    <!--End Box thiết bị số-->
-                </div>
-
-                <!--Left-->
-                <div class="col-md-4 col-sm-4 remove-padding tzsidebar">
-                    <div class="tz-element margin-top12">
-                        <div class="tz-photos">
-                            <div class="tz-title-filter">
-                                <h3 class="tz-title">
-                                    <span>LIFE NEWS</span>
-                                </h3>
-                                <div class="tz-cat-filter">
-                                    <span>All</span>
-                                </div>
-                            </div>
-                            <ul class="tz-post-photos">
-                                <li>
-                                    <a href="single-blog.html">
-                                        <img src="images/data/image-demo/110x110.png" alt="photo one">
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="single-blog.html">
-                                        <img src="images/data/image-demo/110x110.png" alt="photo one">
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="single-blog.html">
-                                        <img src="images/data/image-demo/110x110.png" alt="photo one">
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="single-blog.html">
-                                        <img src="images/data/image-demo/110x110.png" alt="photo one">
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="single-blog.html">
-                                        <img src="images/data/image-demo/110x110.png" alt="photo one">
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="single-blog.html">
-                                        <img src="images/data/image-demo/110x110.png" alt="photo one">
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="single-blog.html">
-                                        <img src="images/data/image-demo/110x110.png" alt="photo one">
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="single-blog.html">
-                                        <img src="images/data/image-demo/110x110.png" alt="photo one">
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="single-blog.html">
-                                        <img src="images/data/image-demo/110x110.png" alt="photo one">
-                                    </a>
-                                </li>
-                            </ul>
-                        </div>
-                    </div>
-
-                    <div class="tz-element border-top">
-                        <div class="abs">
-                            <a href="#"><img src="images/data/image-demo/336x280.png" alt="ads3"></a>
-                        </div>
-                    </div>
-                </div>
-                <!--End Left-->
-
-            </div>
             <!--End Row-->
 
         </div>
@@ -247,19 +59,19 @@
                         <div class="widget">
                             <h4 class="widget_title">About Us</h4>
                             <div class="widget_about">
-                                <h2>LifeMag</h2>
+                                <h2>{{config('app.name')}}</h2>
                                 <p>Sed ut perspiciatis unde omnis iste natus error sit voluptat accusantium doloremque laudantium, totam rem aperiam, </p>
                                 <ul class="widget_about_meta">
                                     <li>
                                         <address>
-                                            122 Baker St, Marylebone London, W1U 6TX
+                                            586/3 Quốc lộ 13 , Hiệp Bình Phước , Thủ Đức , TP. Hồ Chính Minh
                                         </address>
                                     </li>
                                     <li>
                                         0870 241 3300
                                     </li>
                                     <li>
-                                        <a href="#">support@theme.com</a>
+                                        <a href="#">support@leuleu.net</a>
                                     </li>
                                 </ul>
                             </div>
@@ -401,12 +213,12 @@
 
     </div>
 
-    <script src="js/jquery.min.js"></script>
-    <script src="js/bootstrap.min.js"></script>
-    <script src="js/theia-sticky-sidebar.js"></script>
-    <script src="js/off-canvas.js"></script>
-    <script src="js/owl.carousel.js"></script>
-    <script src="js/custom.js"></script>
+    <script src="{{asset('js/jquery.min.js')}}"></script>
+    <script src="{{asset('js/bootstrap.min.js')}}"></script>
+    <script src="{{asset('js/theia-sticky-sidebar.js')}}"></script>
+    <script src="{{asset('js/off-canvas.js')}}"></script>
+    <script src="{{asset('js/owl.carousel.js')}}"></script>
+    <script src="{{asset('js/custom.js')}}"></script>
 
 
 </body>

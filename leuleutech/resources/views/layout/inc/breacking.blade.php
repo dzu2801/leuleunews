@@ -2,11 +2,11 @@
             <div class="container">
                 <span class="breaking-title">TIN NHANH</span>
                 <ul class="tz-breaking-content pull-left">
-                   
+                   @foreach ($dataMessage as $item)
                         <li>
-                        <p>Con lợn</p>
+                            <p>{{$item->content}}</p>
                         </li>
-                   
+                   @endforeach    
                 </ul>
                 <div class="pull-right tz-control-news">
                     <button class="tz-button-next breaking-prev">

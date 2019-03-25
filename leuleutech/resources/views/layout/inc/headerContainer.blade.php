@@ -14,10 +14,10 @@
                                 <a href="#" class="active"> SIGN IN / JOIN</a>
                             </li>
                             <li>
-                                <a href="/advertise">ADVERTISE</a>
+                                <a href="{{asset('/advertise')}}">ADVERTISE</a>
                             </li>
                             <li>
-                                <a href="/contact">CONTACT</a>
+                                <a href="{{asset('/contact')}}">CONTACT</a>
                             </li>
                             <li>
                                 <a href="#">BUY NOW</a>
@@ -60,7 +60,7 @@
                     <a href="/">
                         @foreach ($dataOptions as $item)
                                 @if ($item->OptName == 'logoweb')
-                                    <img src=" {{$item->OptValue}}" alt="{{config('app.name')}}">
+                                    <img src="{{asset('').$item->OptValue}}" alt="{{config('app.name')}}">
                                 @endif
                         @endforeach
                         
@@ -68,7 +68,7 @@
                 </div>
                 <div class="tz-header-ads pull-right">
                     <a href="#">
-                        <img src="images/data/header-replace.png" alt="ads">
+                        <img src="{{asset('images/data/header-replace.png')}}" alt="ads">
                     </a>
                 </div>
 

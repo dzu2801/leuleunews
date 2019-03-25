@@ -10,10 +10,7 @@
 | contains the "web" middleware group. Now create something great!
 |
 */
-
-Route::get('/quantri', 'QTriController@Home');
-Route::get('/quantri/dsbaiviet', 'QTriController@listPost');
-Route::get('/quantri/dsdanhmuc', 'QTriController@listCate');
-
-
-
+use App\Posts;
+Route::get('/','HomeController@Home');
+Route::get('/posts/{id}','PostsController@Views');
+Route::get('/category/{id}','CategoryController@Home');
