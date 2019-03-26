@@ -124,11 +124,28 @@ class QTriController extends Controller
         $listCate = DB::table('categories')->get();
         return view('quantri.pages.category.cateList', ['listCate' => $listCate]);
     }
-
-    public function listCate()
+    public function editCate($id)
     {
-        $listCate = DB::table('categories')->get();
-
-        return view('quantri.pages.category.cateList', ['listCate' => $listCate]);
+        $listCate=DB::table('categories')->where('id','=',$id)->get();
+        return view('quantri.pages.category.cateListDetail',['cate'=>$listCate]);
+    }
+    
+    //Cap nhat categories
+    public function updateCate(Request $request)
+    {
+        $id=$request->input('id');
+        $txtcatename=$request->input('txtcatename');
+        $txtcatedes=$request->input('txtcatedes');
+        if (isset($_POST['status']))
+        $txtcheck=1;
+        else
+        $txtcheck=0;
+        $updated = DB::update('update categories set CateName=?, CateDescription=?,CateStatus=? where id = ?',[$txtcatename,$txtcatedes,$txtcheck,$id] );
+        return redirect('quantri/dsdanhmuc')->with('success','Data Added');
+    }
+    public function createCate(){
+        return view('quantri.pages.category.createCate');
     }
 }
+
+
