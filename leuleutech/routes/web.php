@@ -25,3 +25,6 @@ Route::post('quantri/createnew','QTriController@Create');
 
 Route::get('quantri/editnews/{id}','QTriController@editNews');
 Route::post('quantri/editnews/{id}','QTriController@editNews');
+Route::post('quantri/deletenews/{id}','QtriController@deleteNews');
+Route::get('quantri/deletenews/{id}','QtriController@deleteNews');
+

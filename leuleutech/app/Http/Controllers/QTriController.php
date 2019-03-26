@@ -111,6 +111,12 @@ class QTriController extends Controller
        return redirect('quantri/dsbaiviet')->with('success','Data Update');
 
     }
+    //delete News
+     public function deleteNews($id)
+    {
+        $deleted = DB::delete('delete from posts where id = ?',[$id]);
+        return redirect('quantri/dsbaiviet')->with('success','Data Delete ');
+    }
 
     //Category
     public function listCate()
