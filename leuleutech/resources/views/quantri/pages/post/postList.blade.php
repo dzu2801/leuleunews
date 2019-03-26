@@ -22,7 +22,7 @@
                     {{-- <th>Người Viết</th> --}}
                     <th style="text-align: center; width: 80px">Views</th>
                     <th style="width: 100px"></th>
-                  
+
                   </tr>
                   @foreach ($listPost as $item => $data)
                     <tr>
@@ -37,10 +37,10 @@
                             <a href="{{url('/quantri/deletenews/'.$data->id)}}"><button>Xoá</button></a>
                         </td>
                     </tr>
-                      
+
                   @endforeach
                 </thead>
-                
+
                 </tbody>
               </table>
                     </div>
@@ -63,14 +63,14 @@
                 <label for="uname"><b>Tiêu Đề Bài Viết</b></label><br />
                 <input class="title_text" type="text" required name="txttitle" x-moz-errormessage="Fill this out."><br />
                 <div class="form-group">
-                <label for="uname"><b>Nội Dung</b></label>                
+                <label for="uname"><b>Nội Dung</b></label>
                 <textarea for="uname"class="form-control" id="content" name="txtcontent"></textarea>
                 </div>
                 <label for="uname"><b>Mô tả</b></label><br />
                 <input class="desc_text" type="text" required name="txtdesc" x-moz-errormessage="Fill this out."><br />
-                <label for="uname"><b>Hình ảnh</b></label><br />                    
+                <label for="uname"><b>Hình ảnh</b></label><br />
                 <input class="picture_text" type="text" required name="txtpicture" x-moz-errormessage="Fill this out."><br />
-                
+
                 <input id="btn_them" value="THEM" type="button">
                 <div class="result" style="color:red"></div>
             </div>
@@ -88,7 +88,7 @@
                 modal.style.display = "none";
             }
         };
-    
+
         $(document).ready(function () {
             $("#btn_them").click(function () {
                 var title_text1 = $('.title_text').val();
@@ -97,7 +97,7 @@
                 var picture_text1 = $('.picture_text').val();
                 $sql = "INSERT INTO posts (PostName, PostContent, PostDescription, PostPhoto)
                     VALUES ('title_text1', 'content_text1', 'desc_text1', 'picture_text1')";
-                    
+
                 });
             });
     </script>
@@ -144,4 +144,3 @@
     </script>
 
 @append
-
