@@ -25,9 +25,17 @@ Route::post('quantri/createnew','QTriController@Create');
 
 Route::get('quantri/editnews/{id}','QTriController@editNews');
 Route::post('quantri/editnews/{id}','QTriController@editNews');
+
 Route::post('quantri/deletenews/{id}','QtriController@deleteNews');
 Route::get('quantri/deletenews/{id}','QtriController@deleteNews');
 
 Route::get('quantri/editcategory/{id}','QTriController@editCate');
 Route::post('quantri/editcategory/{id}','QTriController@editCate');
 
+Route::post('quantri/updatecate','QtriController@updateCate');
+
+Route::get('quantri/createcategory','QtriController@createCategory');
+Route::post('quantri/createcategory','QtriController@createCategory');
+
+Route::post('quantri/deletecate/{id}','QtriController@deleteCate');
+Route::get('quantri/deletecate/{id}','QtriController@deleteCate');

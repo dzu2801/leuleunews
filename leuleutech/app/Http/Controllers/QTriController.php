@@ -146,6 +146,12 @@ class QTriController extends Controller
     public function createCate(){
         return view('quantri.pages.category.createCate');
     }
+    public function deleteCate($id)
+    {
+        $deleted = DB::delete('delete from categories where id = ?',[$id]);
+        return redirect('quantri/dsdanhmuc')->with('success','Data Delete ');
+    }
+
 }
 
 
