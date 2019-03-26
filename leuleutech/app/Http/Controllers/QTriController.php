@@ -124,4 +124,11 @@ class QTriController extends Controller
         $listCate = DB::table('categories')->get();
         return view('quantri.pages.category.cateList', ['listCate' => $listCate]);
     }
+
+    public function listCate()
+    {
+        $listCate = DB::table('categories')->get();
+
+        return view('quantri.pages.category.cateList', ['listCate' => $listCate]);
+    }
 }
